@@ -1,0 +1,11 @@
+default:
+    timestamp: 1622724907259
+    metadata: {}
+    asa: {}
+    ssc:
+        nft_approval.teal-nft_clear_state.teal:
+            creator: IUGB7FKFENXH5M5D7YE4DCRYW4MSPRT6JQ4K4YRD2MAPE5YRHIVMMB7BYE
+            txId: ZMKJNWBPLLGJISGKAXBHCTK7T7GZJBSK4CLQNY4AUUJE7UGALS3A
+            confirmedRound: 14549742
+            appID: 16012502
+    dLsig: {}

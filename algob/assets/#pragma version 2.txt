@@ -1,0 +1,133 @@
+#pragma version 2
+txn ApplicationID
+int 0
+==
+bnz l18
+txn OnCompletion
+int UpdateApplication
+==
+bnz l17
+txn OnCompletion
+int DeleteApplication
+==
+bnz l16
+txn OnCompletion
+int CloseOut
+==
+bnz l15
+txn OnCompletion
+int OptIn
+==
+bnz l14
+txna ApplicationArgs 0
+byte "create"
+==
+bnz l11
+txna ApplicationArgs 0
+byte "transfer"
+==
+bnz l8
+err
+l8:
+txn NumAppArgs
+int 2
+==
+txn RekeyTo
+global ZeroAddress
+==
+&&
+int 1
+txna ApplicationArgs 1
+app_local_get
+int 1
+==
+&&
+bnz l10
+err
+l10:
+int 1
+txna ApplicationArgs 1
+app_local_del
+int 2
+txna ApplicationArgs 1
+int 1
+app_local_put
+int 1
+return
+l11:
+txn NumAppArgs
+int 3
+==
+txn Sender
+byte "creator"
+app_global_get
+==
+&&
+txn RekeyTo
+global ZeroAddress
+==
+&&
+bnz l13
+err
+l13:
+byte "total"
+byte "total"
+app_global_get
+int 1
++
+app_global_put
+byte "total"
+app_global_get
+itob
+byte "_h"
+concat
+store 0
+byte "total"
+app_global_get
+itob
+txna ApplicationArgs 1
+app_global_put
+load 0
+txna ApplicationArgs 2
+app_global_put
+int 0
+byte "total"
+app_global_get
+itob
+int 1
+app_local_put
+txn Sender
+byte "creator"
+app_global_get
+==
+return
+l14:
+int 1
+return
+l15:
+int 1
+return
+l16:
+txn Sender
+byte "creator"
+app_global_get
+==
+return
+l17:
+int 0
+return
+l18:
+byte "creator"
+txn Sender
+app_global_put
+txn NumAppArgs
+int 0
+==
+bnz l20
+err
+l20:
+byte "total"
+int 0
+app_global_put
+int 1
+return

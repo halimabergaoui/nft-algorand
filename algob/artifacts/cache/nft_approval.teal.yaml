@@ -1,0 +1,56 @@
+filename: nft_approval.teal
+timestamp: 1622724898
+compiled: AiADAAQBJgMEbmFtZQZoYWxpbWEEc2FmYSIxGRJAAAgjMRkSQAAGACgpZyRDKCpnJEM=
+compiledHash: 5TRYI7RXRHZN7W24S452FAJJA4DA7V6RURVXPQUCQRUPBT4YHXSELGQLGM
+srcHash: 864798448
+base64ToBytes:
+  - 2
+  - 32
+  - 3
+  - 0
+  - 4
+  - 1
+  - 38
+  - 3
+  - 4
+  - 110
+  - 97
+  - 109
+  - 101
+  - 6
+  - 104
+  - 97
+  - 108
+  - 105
+  - 109
+  - 97
+  - 4
+  - 115
+  - 97
+  - 102
+  - 97
+  - 34
+  - 49
+  - 25
+  - 18
+  - 64
+  - 0
+  - 8
+  - 35
+  - 49
+  - 25
+  - 18
+  - 64
+  - 0
+  - 6
+  - 0
+  - 40
+  - 41
+  - 103
+  - 36
+  - 67
+  - 40
+  - 42
+  - 103
+  - 36
+  - 67

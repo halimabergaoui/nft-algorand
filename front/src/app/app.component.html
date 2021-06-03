@@ -1,0 +1,28 @@
+<button (click)="connectAlgo('TestNet')"> connect</button>
+<br/>
+<select *ngIf="connected" [(ngModel)]="connectedAccount">
+    <option *ngFor="let account of accounts" value="{{account.address}}"> {{account.address}} </option>
+</select>
+<br/>
+<div *ngIf="connectedAccount">
+<button (click)="getGlobalStatus()"> get global status</button>
+<br/>
+<button (click)="updateGlobalStatus()"> create update SSC tnx with sdk</button>
+<br/>
+<button (click)="signupdateTransaction()"> sign update SSC tnx with algosigner</button>
+<br/>
+<button (click)="applicationTxn()"> create and sign update Txn with algosigner</button>
+</div>
+<br/>
+<br/>
+<div>
+    Output:
+    <br/>
+    global status : {{globalStatus}}
+    <br/>
+    transaction ID : {{txId}}
+    <br/>
+    transaction : {{txnString}}
+    <br/>
+    errors : {{message}}
+</div>
