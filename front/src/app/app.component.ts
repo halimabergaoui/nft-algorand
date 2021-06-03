@@ -120,7 +120,7 @@ export class AppComponent {
           genesisHash: txParams['genesis-hash'],
           appIndex: 16012502,
           note: 'note',
-          //appOnComplete: 4
+          appOnComplete: 4
         })
           .then((signedTx) => {
             // @ts-ignore 
