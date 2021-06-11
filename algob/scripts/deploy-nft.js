@@ -22,20 +22,23 @@ async function run (runtimeEnv, deployer) {
   };
 
   await executeTransaction(deployer, algoTxnParams); // fund john*/
+  const escrowAccount = await deployer.loadLogic('escrow.teal', {});
+  console.log('Escrow Account Address:', escrowAccount.address());
 
-  console.log("here")
+  /*console.log("here")
   await deployer.deploySSC('nft_approval.teal', 'nft_clear_state.teal', {
     sender: masterAccount,
-    localInts: 16,
+    localInts: 5,
     globalInts: 2,
     globalBytes: 10,
+    localBytes: 10,
 
   }, {});
 
 
   const sscInfo = await deployer.getSSC('nft_approval.teal', 'nft_clear_state.teal');
   const appId = sscInfo.appID;
-  console.log(sscInfo);
+  console.log(sscInfo);*/
 
  /* try {
     await deployer.optInAccountToSSC(masterAccount, appId, {}, {}); // opt-in to asc by master

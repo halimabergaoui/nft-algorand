@@ -7,11 +7,21 @@
 <div *ngIf="connectedAccount">
 <button (click)="getGlobalStatus()"> get global status</button>
 <br/>
+<button (click)="getBalance()"> get balance</button>
+<br/>
 <button (click)="updateGlobalStatus()"> create update SSC tnx with sdk</button>
 <br/>
 <button (click)="signupdateTransaction()"> sign update SSC tnx with algosigner</button>
 <br/>
-<button (click)="applicationTxn()"> create and sign update Txn with algosigner</button>
+<button (click)="applicationUpdateTxn()"> create and sign update Txn with algosigner</button>
+<br/>
+<button (click)="applicationCallTxn()"> create and sign call Txn with algosigner</button>
+<br/>
+<button (click)="applicationOptIn()"> application optin Txn with sdk</button>
+<br/>
+<button (click)="applicationCallSdk()"> create and sign create call Txn with sdk</button>
+<br/>
+<button (click)="applicationCheckCallSdk()"> create and sign check call Txn with sdk</button>
 </div>
 <br/>
 <br/>

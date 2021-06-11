@@ -1,31 +1,88 @@
 #pragma version 2
-
-int NoOp
-txn OnCompletion
+txn ApplicationID
+int 0
 ==
-bnz application_call
-
+bnz l18
+txn OnCompletion
 int UpdateApplication
-txn OnCompletion
 ==
-bnz handle_updateapp
+bnz l17
+txn OnCompletion
+int DeleteApplication
+==
+bnz l16
+txn OnCompletion
+int CloseOut
+==
+bnz l15
+txn OnCompletion
+int OptIn
+==
+bnz l14
+txn OnCompletion
+int NoOp
+==
+bnz l10
 
 err
 
-application_call:
-
-byte "name"
-byte "halima"
+l18:
+byte "total"
+int 1
 app_global_put
 int 1
 return
 
-handle_updateapp:
+l17:
+int 0
+return
 
-byte "name"
-byte "safa"
-app_global_put
+l16:
+int 0
+return
+
+l15:
+int 0
+return
+
+l14:
 int 1
 return
 
+l10:
+txna ApplicationArgs 0
+byte "create"
+==
+bnz l11
+txna ApplicationArgs 0
+byte "check"
+==
+bnz check_tnx
 
+int 1
+return
+
+l11:
+int 0
+byte "assetId"
+txna ApplicationArgs 1
+app_local_put
+
+int 1
+return
+
+check_tnx:
+int 0
+int 0
+byte "assetId"
+app_local_get
+gtxn 1 Note
+==
+bnz ok
+
+int 0
+return
+
+ok:
+int 1
+return

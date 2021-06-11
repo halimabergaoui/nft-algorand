@@ -30,21 +30,72 @@ router.use(bodyParser.urlencoded({ extended: true }));
 
 
 
-router.get('/getGlobalStatus', urlencodedParser, (req, res, next) =>{
-    applicationController.getGlobalStatus() 
-    .then(result => {
-        res.send(result);
-    })
-    .catch(next)});
+router.get('/getGlobalStatus', urlencodedParser, (req, res, next) => {
+    applicationController.getGlobalStatus()
+        .then(result => {
+            res.send(result);
+        })
+        .catch(next)
+});
 
-router.get('/updateSSC', urlencodedParser, (req, res, next) =>{
-    applicationController.updateSSC(req.query.sender) 
-    .then(result => {
-        res.send(result);
-    })
-    .catch(next)});
+router.get('/getBalance', urlencodedParser, (req, res, next) => {
+    applicationController.getAlgorandBalance(req.query.publickey)
+        .then(result => {
+            res.send(result);
+        })
+        .catch(next)
+});
 
-    
+router.get('/updateSSC', urlencodedParser, (req, res, next) => {
+    applicationController.updateSSC(req.query.sender)
+        .then(result => {
+            res.send(result);
+        })
+        .catch(next)
+});
 
+router.post('/sendTransaction', (req, res, next) =>
+    getRawBody(req)
+        .then(tnx => {
+            return applicationController.sendTransaction(JSON.parse(tnx))
+        })
+        .then(result => {
+            res.send(result);
 
-    module.exports = router;
+        })
+        .catch(next));
+
+router.post('/applicationCall', urlencodedParser, (req, res, next) =>
+    getRawBody(req)
+        .then(input => {
+            return applicationController.applicationCall(JSON.parse(input))
+        })
+        .then(result => {
+            res.send(result);
+
+        })
+        .catch(next));
+
+router.post('/applicationOptIn', urlencodedParser, (req, res, next) =>
+    getRawBody(req)
+        .then(input => {
+            return applicationController.applicationOptIn(JSON.parse(input))
+        })
+        .then(result => {
+            res.send(result);
+
+        })
+        .catch(next));
+
+router.post('/applicationCheckCall', urlencodedParser, (req, res, next) =>
+    getRawBody(req)
+        .then(input => {
+            return applicationController.applicationCheckCall(JSON.parse(input))
+        })
+        .then(result => {
+            res.send(result);
+
+        })
+        .catch(next));
+
+module.exports = router;

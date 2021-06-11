@@ -21,8 +21,8 @@ let accounts = mkAccounts([
     // To export a mnemonic you may use the following command:
     // goal account export -a "your_account_address" -d $ALGORAND_DATA
     //mnemonic: "enforce drive foster uniform cradle tired win arrow wasp melt cattle chronic sport dinosaur announce shell correct shed amused dismiss mother jazz task above hospital"
-    addr: "IUGB7FKFENXH5M5D7YE4DCRYW4MSPRT6JQ4K4YRD2MAPE5YRHIVMMB7BYE",
-    mnemonic: "rain lizard path piece broom delay olive nothing visit whip valid mushroom joke increase lock mango tip time cradle cook minimum sorry pledge ability crisp"
+    addr: "ASGFID7W4STLZ2P4NFL6OWKUBOQWHKE4MEYI6WH7MKLZZKZRS2O6N2UQAY",
+    mnemonic: "dice fatal gauge debris charge collect amused lab flame leader purity harsh rate apology volume daring ladder glance float fall opinion bamboo trumpet absorb gesture"
   
   },
   // Following accounts are generated using `algob gen-accounts`.

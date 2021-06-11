@@ -1,56 +1,147 @@
 filename: nft_approval.teal
-timestamp: 1622724898
-compiled: AiADAAQBJgMEbmFtZQZoYWxpbWEEc2FmYSIxGRJAAAgjMRkSQAAGACgpZyRDKCpnJEM=
-compiledHash: 5TRYI7RXRHZN7W24S452FAJJA4DA7V6RURVXPQUCQRUPBT4YHXSELGQLGM
-srcHash: 864798448
+timestamp: 1623329624
+compiled: AiAFAAQFAgEmBAV0b3RhbAZjcmVhdGUFY2hlY2sHYXNzZXRJZDEYIhJAACUxGSMSQAAlMRkkEkAAIDEZJRJAABsxGSEEEkAAFTEZIhJAABEAKCEEZyEEQyJDIkMiQyEEQzYaACkSQAALNhoAKhJAAAwhBEMiKzYaAWYhBEMiIitiMwEFEkAAAiJDIQRD
+compiledHash: CCHLB3KFPJT7HUX7YKROOFIKCB6LNGLCB3W5DXKRAL7YZ3WCVR7JIRRULA
+srcHash: 1644054056
 base64ToBytes:
   - 2
   - 32
-  - 3
+  - 5
   - 0
   - 4
+  - 5
+  - 2
   - 1
   - 38
-  - 3
   - 4
-  - 110
-  - 97
-  - 109
-  - 101
-  - 6
-  - 104
+  - 5
+  - 116
+  - 111
+  - 116
   - 97
   - 108
-  - 105
-  - 109
-  - 97
-  - 4
-  - 115
-  - 97
-  - 102
-  - 97
-  - 34
-  - 49
-  - 25
-  - 18
-  - 64
-  - 0
-  - 8
-  - 35
-  - 49
-  - 25
-  - 18
-  - 64
-  - 0
   - 6
+  - 99
+  - 114
+  - 101
+  - 97
+  - 116
+  - 101
+  - 5
+  - 99
+  - 104
+  - 101
+  - 99
+  - 107
+  - 7
+  - 97
+  - 115
+  - 115
+  - 101
+  - 116
+  - 73
+  - 100
+  - 49
+  - 24
+  - 34
+  - 18
+  - 64
+  - 0
+  - 37
+  - 49
+  - 25
+  - 35
+  - 18
+  - 64
+  - 0
+  - 37
+  - 49
+  - 25
+  - 36
+  - 18
+  - 64
+  - 0
+  - 32
+  - 49
+  - 25
+  - 37
+  - 18
+  - 64
+  - 0
+  - 27
+  - 49
+  - 25
+  - 33
+  - 4
+  - 18
+  - 64
+  - 0
+  - 21
+  - 49
+  - 25
+  - 34
+  - 18
+  - 64
+  - 0
+  - 17
   - 0
   - 40
-  - 41
+  - 33
+  - 4
   - 103
-  - 36
+  - 33
+  - 4
   - 67
-  - 40
+  - 34
+  - 67
+  - 34
+  - 67
+  - 34
+  - 67
+  - 33
+  - 4
+  - 67
+  - 54
+  - 26
+  - 0
+  - 41
+  - 18
+  - 64
+  - 0
+  - 11
+  - 54
+  - 26
+  - 0
   - 42
-  - 103
-  - 36
+  - 18
+  - 64
+  - 0
+  - 12
+  - 33
+  - 4
+  - 67
+  - 34
+  - 43
+  - 54
+  - 26
+  - 1
+  - 102
+  - 33
+  - 4
+  - 67
+  - 34
+  - 34
+  - 43
+  - 98
+  - 51
+  - 1
+  - 5
+  - 18
+  - 64
+  - 0
+  - 2
+  - 34
+  - 67
+  - 33
+  - 4
   - 67

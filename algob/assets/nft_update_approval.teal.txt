@@ -1,0 +1,31 @@
+#pragma version 2
+
+int NoOp
+txn OnCompletion
+==
+bnz application_call
+
+int UpdateApplication
+txn OnCompletion
+==
+bnz handle_updateapp
+
+err
+
+application_call:
+
+byte "name"
+byte "halima"
+app_global_put
+int 1
+return
+
+handle_updateapp:
+
+byte "name"
+txna ApplicationArgs 0
+app_global_put
+int 1
+return
+
+
